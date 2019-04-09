@@ -23,6 +23,9 @@ public class _215KthLargestElementInArray {
         return queue.peek();
     }
     //Time: O(n), worst O(n * n), space O(1)
+    //https://en.wikipedia.org/wiki/Quickselect
+    //Quick Select is related to QuickSort (O(n log n)), but it only includes partition section which have an average
+    //time (O(n) + O(n/2) + O(n /4) + ....) roughly equals to O(n)
     public int findKthLargest3(int[] nums, int k){
         return helper(nums, 0, nums.length - 1, k);
     }
@@ -48,7 +51,8 @@ public class _215KthLargestElementInArray {
         int pivot = nums[left];
 
         while (left < right) {
-            // choose left side as pivot, then must move right side
+            // choose left side as pivot, then must move right side at first. vice versa
+            //have to keep left < right in inner loop
             while (left < right && nums[right] <= pivot) {
                 right--;
             }
