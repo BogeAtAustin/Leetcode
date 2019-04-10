@@ -33,6 +33,8 @@ public class _266PalindronePermutation {
             }
         }
     }
+    //第一种方法是基于字符串的长度奇偶，和奇数的字符的个数进行判断，
+    //若字符长度为偶数，奇数字符应为0，若字符长度为奇数，奇数字符只能为1
 
     public boolean canPermutePalindrome2(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
@@ -52,4 +54,6 @@ public class _266PalindronePermutation {
         }
         return true;
     }
+    //只判断奇数字符的个数，若奇数字符个数大于1，一定无法构成回文
+    //奇数字符个数小于或者等于1，都可以构成回文
 }
