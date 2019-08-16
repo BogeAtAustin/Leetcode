@@ -16,7 +16,7 @@ public class _215KthLargestElementInArray {
         for(int num : nums){
             queue.offer(num);
         }
-
+        //the kth is k-1 in index
         for(int i = 0; i < k - 1; i++){
             queue.poll();
         }
@@ -53,6 +53,7 @@ public class _215KthLargestElementInArray {
         while (left < right) {
             // choose left side as pivot, then must move right side at first. vice versa
             //have to keep left < right in inner loop
+            //降序，右边小于pivot的就直接跳过
             while (left < right && nums[right] <= pivot) {
                 right--;
             }

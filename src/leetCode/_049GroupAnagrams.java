@@ -28,6 +28,8 @@ public class _049GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
             HashMap<String, List<String>> map = new HashMap();
             for(String str : strs){
+                //change string to arrary, then sort it, then change it back
+                //to string
                 char[] ca = str.toCharArray();
                 Arrays.sort(ca);
                 String s = String.valueOf(ca);
@@ -37,6 +39,7 @@ public class _049GroupAnagrams {
                 }
                 map.get(s).add(str);
             }
+            //the way to convert a map's value collection to an arraylist
             return new ArrayList(map.values());
     }
 }

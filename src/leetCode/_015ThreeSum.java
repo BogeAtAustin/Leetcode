@@ -29,14 +29,17 @@ public class _015ThreeSum {
 
                     res.add(com);
 
+                    //here not i < k
                     while(i < j && nums[i] == nums[i + 1]){
                         i++;
                     }
                     while(k < j && nums[j] == nums[j - 1]){
                         j--;
                     }
+                    k++;
+                    j--;
                 }else if(nums[i] + nums[j] + nums[k] < 0){
-                    i++;
+                    k++;
                 }else{
                     j--;
                 }

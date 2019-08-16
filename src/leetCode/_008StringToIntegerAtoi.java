@@ -2,6 +2,7 @@ package leetCode;
 
 public class _008StringToIntegerAtoi {
     public int myAtoi(String str){
+        //double has even larger range compare to long
         double result = 0;
         if(str == null){
             return 0;

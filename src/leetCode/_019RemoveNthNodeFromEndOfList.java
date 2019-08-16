@@ -24,6 +24,7 @@ public class _019RemoveNthNodeFromEndOfList {
         }
         if(slow.next != null){
             slow.next = slow.next.next;
+        // if Nth = 1
         }else{
             slow.next = null;
         }

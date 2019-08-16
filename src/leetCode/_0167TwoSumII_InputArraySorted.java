@@ -29,7 +29,8 @@ public class _0167TwoSumII_InputArraySorted {
                 if(sum == target){
                     res[0] = i + 1;
                     res[1] = j + 1;
-                    //return res; Wrong.
+                    //return res; if you have return in here. you still to return it at the end;
+                    //so break is better choice in here
                     break;
                 }else if(sum < target){
                     i++;
@@ -37,7 +38,7 @@ public class _0167TwoSumII_InputArraySorted {
                     j--;
                 }
             }
-            // have to return something outside the while loop. so use break if == target
+            //have to return something outside the while loop. so use break if == target
             return res;
         }
 

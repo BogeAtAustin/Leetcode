@@ -23,8 +23,8 @@ public class _011ContainerWithMostWater {
         while(i < j){
             maxArea = Math.max(maxArea, Math.min(height[i], height[j]) * (j - i));
             //收敛的过程
-            //比如当i和j时已经是当前最大值了，为了寻找更大的，你当然希望保持住j,然后
-            //寻找更高的i
+            //比如当i和j时已经是当前最大值了，为了寻找更大的，你当然希望保持住大的,然后
+            //寻找把小的替换掉
             if(height[i] < height[j]){
                 i++;
             //同上，都是低（小）的移动，高（大）的不动
