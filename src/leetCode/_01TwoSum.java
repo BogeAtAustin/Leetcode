@@ -1,6 +1,8 @@
 package leetCode;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class _01TwoSum {
     //Given an array of integers, return indices of the two numbers such that they add up to a specific target.
@@ -32,10 +34,15 @@ public class _01TwoSum {
     }
 
     public static void main(String[] args){
-        _01TwoSum object = new _01TwoSum();
-        int[] nums = {2,7,11,15};
-        int[] result = object.twoSum(nums, 9);
-        System.out.println(result[0] + " " + result[1]);
+//        _01TwoSum object = new _01TwoSum();
+//        int[] nums = {2,7,11,15};
+//        int[] result = object.twoSum(nums, 9);
+//        System.out.println(result[0] + " " + result[1]);
+        Queue<String> queue = new LinkedList<>();
+        queue.add("test1");
+        queue.add(null);
+        queue.add("test2");
+        System.out.println(queue.size());
 
     }
 }

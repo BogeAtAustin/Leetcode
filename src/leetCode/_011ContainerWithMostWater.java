@@ -7,6 +7,7 @@ public class _011ContainerWithMostWater {
         int maxArea = 0;
         //两个pointer都是从左开始
         for(int i = 0; i < height.length; i++){
+            //依然是到length 而不是length - 1
             for(int j = i + 1; j < height.length; j++){
                 maxArea = Math.max(maxArea,Math.min(height[i], height[j]) * (j - i));
             }
